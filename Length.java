@@ -23,4 +23,14 @@ public class Length
   {
     return String.format("%d:%02d",minutes,seconds);
   }
+  
+  /**
+  * Compares this length with another length. 
+  */
+  public int compareTo(Length time) {
+    assert time!= null: "Length not initialized";
+		Integer lengthInSeconds = seconds + (60 * minutes);
+		Integer comparedLengthInSeconds = time.seconds + (60 * time.minutes);
+		return lengthInSeconds.compareTo(comparedLengthInSeconds);
+	}
 }

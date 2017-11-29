@@ -17,7 +17,7 @@ public class Track implements Comparable<Track> {
 	 */
 	public int compareTo(Track other) {
 		Exercise1.NumberOfComparisons++;
-		return Integer.compare(time.seconds + time.minutes*60, other.time.seconds + other.time.minutes*60);
+		return time.compareTo(other.time);
 	}
 /*	public int compareTo(Track other) {
 		if (artist.compareTo(other.artist) == 0) {
